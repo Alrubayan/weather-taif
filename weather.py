@@ -23,15 +23,9 @@ def weatherCondition(time = "current"):
     weather = getWeather()
     if time == "current":
         for item in weather[time]:
-            if item == "dt":
-                    dTime = datetime.fromtimestamp(weather[time][str(item)])
-                    print(f"{item}: {dTime}")
-            elif item == "sunrise":
-                    dTime = datetime.fromtimestamp(weather[time][str(item)])
-                    print(f"{item}: {dTime}")
-            elif item == "sunset":
-                    dTime = datetime.fromtimestamp(weather[time][str(item)])
-                    print(f"{item}: {dTime}")
+            if item == "dt" or item == "sunrise" or item == "sunset":
+                    fTime = datetime.fromtimestamp(weather[time][str(item)])
+                    print(f"{item}: {fTime}")
             else:
                 print(f"{item}: {weather[time][str(item)]}")
     elif time == "hourly":
@@ -50,21 +44,9 @@ def weatherCondition(time = "current"):
               print(f"\n")
                           
               for item in items:
-                    if item == "dt":
-                         dTime = datetime.fromtimestamp(items[item])
-                         print(f"{item}: {dTime}")
-                    elif item == "sunrise":
-                         dTime = datetime.fromtimestamp(items[item])
-                         print(f"{item}: {dTime}")
-                    elif item == "sunset":
-                         dTime = datetime.fromtimestamp(items[item])
-                         print(f"{item}: {dTime}")
-                    elif item == "moonrise":
-                         dTime = datetime.fromtimestamp(items[item])
-                         print(f"{item}: {dTime}")
-                    elif item == "moonset":
-                         dTime = datetime.fromtimestamp(items[item])
-                         print(f"{item}: {dTime}")
+                    if item == "dt" or item == "sunrise" or item == "sunset" or item == "moonrise" or item == "moonset":
+                         fTime = datetime.fromtimestamp(items[item])
+                         print(f"{item}: {fTime}")
                     else:
                          print(f"{item}: {items[item]}")
 
