@@ -1,0 +1,7 @@
+log.sh
+secrets.py
+dealingWithJson.py
+env/*
+__pycache__/*
+w3.py
+weather.json
